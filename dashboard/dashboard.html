@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NotesApp | Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas></canvas> <!-- Canvas for background effect -->
+
+  <header>
+    <h1>Collaborative Notes App</h1>
+  </header>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>NotesApp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="../main.html">Home</a></li>
+      <li><a href="#">My Notes</a></li>
+      <li><a href="#" role="button">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="dashboard-header">
+      <h1>Welcome Back, [User]</h1>
+    </header>
+
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Total Notes</h2>
+          <h3>All-time count</h3>
+        </hgroup>
+        <div class="icon-container">🗒️</div>
+        <p>10</p>
+      </section>
+
+      <section>
+        <hgroup>
+          <h2>Recent Notes</h2>
+          <h3>Last updated</h3>
+        </hgroup>
+        <ul class="note-list recent-notes">
+          <li><a href="#">Meeting Notes</a></li>
+          <li><a href="#">Project Plan</a></li>
+          <li><a href="#">Shopping List</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <hgroup>
+          <h2>Notes by Category</h2>
+          <h3>Distribution</h3>
+        </hgroup>
+        <div class="icon-container">📊</div>
+        <p>Work: 3</p>
+        <p>Personal: 5</p>
+        <p>Misc: 2</p>
+      </section>
+
+      <section>
+        <hgroup>
+          <h2>Quick Actions</h2>
+          <h3>Create or manage notes</h3>
+        </hgroup>
+        <div class="quick-actions">
+          <button onclick="location.href='/new-note.html'">New Note</button>
+          <button onclick="location.href='/notes.html'">View All Notes</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
