@@ -1,4 +1,4 @@
-/* Sleeker and Cleaner Design */
+/* Base styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
@@ -6,9 +6,7 @@ body {
   padding: 0;
   line-height: 1.6;
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
   background: transparent;
-  /* Ensure transparency to see the canvas */
 }
 
 canvas {
@@ -46,7 +44,6 @@ header h1 {
   margin: auto;
   position: relative;
   z-index: 1;
-  /* Ensure it stays above the canvas */
 }
 
 .grid {
@@ -57,13 +54,11 @@ header h1 {
 
 section {
   background: #1c1c1c;
-  /* Use a solid color instead of rgba to ensure opacity */
   border-radius: 15px;
   padding: 2rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: center;
-  /* Center content */
 }
 
 section:hover {
@@ -93,7 +88,6 @@ ul li,
 em {
   color: #cccccc;
   text-shadow: none;
-  /* Removed glow effect from descriptive text */
 }
 
 .icon-container {
@@ -156,7 +150,6 @@ ul.note-list {
 
 ul.note-list li {
   background: #1c1c1c;
-  /* Solid color to ensure no transparency */
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 10px;
@@ -209,8 +202,62 @@ footer {
   box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.8);
 }
 
+/* Mobile-specific optimizations */
 @media (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+    font-size: 1.8rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  /* Modified grid to ensure containers do not stack side by side */
   .grid {
-    grid-template-columns: 1fr;
+    display: block; /* Switch grid to block layout */
+  }
+
+  section {
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem; /* Add spacing between sections */
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  .icon-container {
+    font-size: 2.5rem;
+  }
+
+  input[type="search"],
+  input[type="email"],
+  input[type="text"],
+  button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  ul.note-list li {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .dark-mode-toggle {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
   }
 }
