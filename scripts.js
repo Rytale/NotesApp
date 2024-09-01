@@ -26,7 +26,7 @@ window.onload = function() {
     window.addEventListener('mousemove', function(event) {
         mouse.x = event.x;
         mouse.y = event.y;
-    });
+    });//test
 
     class Particle {
         constructor() {
