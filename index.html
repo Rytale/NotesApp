@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collaborative Notes App</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Collaborative Notes App</h1>
+  </header>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>NotesApp</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">My Notes</a></li>
+      <li><a href="#" role="button">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+      <!-- Profile Section -->
+      <section class="profile">
+        <hgroup>
+          <h2>User Profile</h2>
+          <h3>Manage your profile information</h3>
+        </hgroup>
+        <p>View and edit your profile details, such as name, email, and avatar.</p>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      </section>
+
+      <!-- Notifications Section -->
+      <section class="notifications">
+        <hgroup>
+          <h2>Notifications</h2>
+          <h3>Stay Updated
+        </hgroup>
+        </hgroup>
+        <p>Receive alerts for changes, comments, or collaborations on your notes.</p>
+      </section>
+
+      <!-- Note Editor -->
+      <section class="note-editor">
+        <hgroup>
+          <h2>Create & Manage Notes</h2>
+          <h3>Rich Text Editor</h3>
+        </hgroup>
+        <p>Use the editor below to create, format, and manage your notes.</p>
+        <textarea placeholder="Start typing your note here..."></textarea>
+      </section>
+
+      <!-- Folder Organization -->
+      <section class="folders">
+        <div class="icon-container">
+          <i class="fas fa-folder"></i>
+        </div>
+        <hgroup>
+          <h2>Organize Notes</h2>
+          <h3>Create and manage folders to organize your notes efficiently.</h3>
+        </hgroup>
+      </section>
+
+      <!-- Tagging System -->
+      <section class="tags">
+        <div class="icon-container">
+          <i class="fas fa-tag"></i>
+        </div>
+        <hgroup>
+          <h2>Tag Your Notes</h2>
+          <h3>Use tags to categorize and easily retrieve your notes.</h3>
+        </hgroup>
+      </section>
+
+      <!-- Search Functionality -->
+      <section class="search-bar">
+        <hgroup>
+          <h2>Search Notes</h2>
+          <h3>Quickly find your notes by searching keywords.</h3>
+        </hgroup>
+        <input type="search" placeholder="Search your notes...">
+      </section>
+
+      <!-- Collaboration Tools -->
+      <section class="collaboration-tools">
+        <hgroup>
+          <h2>Collaborative Tools</h2>
+          <h3>Enable real-time collaboration on notes with other users.</h3>
+        </hgroup>
+        <p><em>Note: This feature requires backend integration for real-time editing.</em></p>
+      </section>
+
+      <!-- Drawing Tool -->
+      <section class="drawing-tool">
+        <hgroup>
+          <h2>Drawing Tool</h2>
+          <h3>Use this tool to sketch or annotate directly within your notes.</h3>
+        </hgroup>
+        <p><em>Note: This feature requires integration with a drawing API.</em></p>
+      </section>
+
+      <!-- Note Sharing -->
+      <section class="note-sharing">
+        <hgroup>
+          <h2>Share Notes</h2>
+          <h3>Share with Others</h3>
+        </hgroup>
+        <p>Send your notes to other users via email.</p>
+        <input type="email" placeholder="Enter email address" required>
+        <button>Share Note</button>
+      </section>
+
+      <!-- Task Manager -->
+      <section class="task-manager">
+        <hgroup>
+          <h2>Task Manager</h2>
+          <h3>Keep Track of Tasks</h3>
+        </hgroup>
+        <p>Manage your tasks alongside your notes.</p>
+        <ul>
+          <li><input type="checkbox"> Task 1: Review project plan</li>
+          <li><input type="checkbox"> Task 2: Draft meeting agenda</li>
+          <li><input type="checkbox"> Task 3: Finalize design concepts</li>
+        </ul>
+      </section>
+
+      <!-- Note List -->
+      <ul class="note-list">
+        <h3>Your Notes</h3>
+        <li>Note 1: Meeting Notes - <em>Last updated on 01/09/2024</em></li>
+        <li>Note 2: Project Plan - <em>Last updated on 31/08/2024</em></li>
+        <li>Note 3: Design Ideas - <em>Last updated on 30/08/2024</em></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
